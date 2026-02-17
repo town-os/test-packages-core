@@ -1,0 +1,13 @@
+image: nginx:1.0
+environment:
+  NGINX_HOST: "@hostname@"
+network:
+  external:
+    "@port@": "80"
+  internal: {}
+volumes:
+  html:
+    mountpoint: /usr/share/nginx/html
+questions:
+  hostname: "What hostname should nginx serve?"
+  port: "What external port should nginx listen on?"
