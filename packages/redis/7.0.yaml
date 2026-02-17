@@ -9,4 +9,5 @@ volumes:
   data:
     mountpoint: /data
 questions:
-  password: "What password should redis use?"
+  password:
+    query: "What password should redis use?"

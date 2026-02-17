@@ -11,5 +11,9 @@ volumes:
   config:
     mountpoint: /etc/nginx/conf.d
 questions:
-  hostname: "What hostname should nginx serve?"
-  port: "What external port should nginx listen on?"
+  hostname:
+    query: "What hostname should nginx serve?"
+    type: hostname
+  port:
+    query: "What external port should nginx listen on?"
+    type: port
