@@ -1,0 +1,17 @@
+image: nginx:1.26-alpine
+environment:
+  NGINX_HOST: "@hostname@"
+network:
+  external:
+    "@port@": "80"
+  internal: {}
+volumes: {}
+questions:
+  hostname:
+    query: "What hostname should nginx serve?"
+    type: hostname
+  port:
+    query: "What external port should nginx listen on?"
+    type: port
+notes:
+  URL: "http://@hostname@:@port@"
