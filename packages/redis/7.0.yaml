@@ -1,4 +1,5 @@
 image: redis:7.0-alpine
+command: ["redis-server", "--bind", "0.0.0.0"]
 environment:
   REDIS_PASSWORD: "@password@"
 network:
