@@ -8,6 +8,10 @@ network:
 volumes:
   data:
     mountpoint: /data
+    quota: "@maxmemory@"
 questions:
   password:
     query: "What password should redis use?"
+  maxmemory:
+    query: "What is the maximum memory for redis data?"
+    type: bytes

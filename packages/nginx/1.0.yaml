@@ -1,4 +1,4 @@
-image: nginx:1.0
+image: nginx:1.26-alpine
 environment:
   NGINX_HOST: "@hostname@"
 network:
@@ -15,3 +15,5 @@ questions:
   port:
     query: "What external port should nginx listen on?"
     type: port
+notes:
+  URL: "http://@hostname@:@port@"
