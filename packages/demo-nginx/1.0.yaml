@@ -15,4 +15,6 @@ questions:
     query: "What external port should nginx listen on?"
     type: port
 notes:
-  URL: "http://@hostname@:@port@"
+  URL:
+    value: "http://@hostname@:@port@"
+    type: url
