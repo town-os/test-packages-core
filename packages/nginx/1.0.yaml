@@ -1,3 +1,4 @@
+description: "A lightweight, high-performance web server and reverse proxy."
 image: nginx:1.26-alpine
 environment:
   NGINX_HOST: "@hostname@"
