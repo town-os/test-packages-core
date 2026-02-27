@@ -6,12 +6,15 @@ environment:
 network:
   external: {}
   internal:
-    "6379": "6379"
+    "@port@": "6379"
 volumes:
   data:
     mountpoint: /data
     quota: "@maxmemory@"
 questions:
+  port:
+    query: "What port should redis listen on?"
+    type: port
   password:
     query: "What password should redis use?"
   maxmemory:
