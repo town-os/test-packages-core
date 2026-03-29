@@ -1,0 +1,20 @@
+description: "A web application with a Redis cache backend."
+image: nginx:1.26-alpine
+environment:
+  CACHE_HOST: "@dep_cache_host@"
+  CACHE_PORT: "@dep_cache_port_6379@"
+  CACHE_PASS: "@cachepass@"
+network:
+  external:
+    "@port@": "80"
+  internal: {}
+questions:
+  port:
+    query: "What external port should the application listen on?"
+    type: port
+  cachepass:
+    query: "What password should the cache use?"
+dependencies:
+  cache:
+    package: redis
+    version: "7.0"
