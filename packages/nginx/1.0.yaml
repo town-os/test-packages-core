@@ -1,5 +1,6 @@
 description: "A lightweight, high-performance web server and reverse proxy."
 image: nginx:1.26-alpine
+supplies: ["http"]
 environment:
   NGINX_HOST: "@hostname@"
 network:
